@@ -13,21 +13,44 @@ html{
     font-family: PressStart;
 }
 
+img{
+    max-width: 100%;
+}
+
+address{
+    font-size: 1em;
+    margin-top: 1em;
+    color: #3D444A;
+    font-weight: bold;
+    display: inline-block;
+    
+}
+
 a{
     text-decoration: none;
     color: #215D8F;
 }
 
-address{
-    font-size: 1em;
-    color: #3D444A;
-    font-weight: bold;
-
-}
-
 a:hover{
     opacity: 0.7;
 }
+
+th{
+    display: none;
+}
+
+td{
+    width: 100%;
+    display: block;
+}
+
+td:nth-of-type(1){
+    font-size: 1.4em;
+    color: #3D444A;
+    font-weight: bold;
+}
+
+
 
 .title{
     text-align: center;
@@ -45,21 +68,22 @@ a:hover{
 
 .container{
     /* Centrar items vertical y horizaontal. */
+    height: 100vh; /* Usa todo el alto de la pantalla. */
     display: flex;
     align-items: center; /* Centra en el eje vertical*/
     justify-content: center; /* Centra en el eje horizaontal*/
     background: #8e9eab;  /* fallback for old browsers */
     background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    height: 100vh; /* Usa todo el alto de la pantalla. */
 }
 
 .content{
     width: 100%;
     height: 100%;
-    padding: 1.4em;
+    padding: 1em;
+    overflow: scroll;/* Evita que el contenido se salga de los limites. */
     max-width: 960px;
-    max-height: 500px;
+    max-height: 550px;
     position: relative;
     border-radius: 2em;
     background-color: #E8EBED;
@@ -118,7 +142,7 @@ a.close:hover{
 }
 
 .position{
-    padding: 10px;
+    padding: 0.5em;
     color: #E9EFF5;
     margin-left: 0.5em;
     border-radius: 1em;
@@ -130,3 +154,32 @@ a.close:hover{
     margin-right: 1em;
     height: 170px;
 }
+
+
+
+@media (min-width: 800px) {
+    .content{
+        padding: 1.4em;
+        overflow: unset;
+    }
+
+    th{
+        display: table-cell;
+    }
+
+    td{
+        display: table-cell;
+        width: auto;
+    }
+
+    td:nth-of-type(1){
+        font-size: 1em;
+    }
+}
+
+@media (max-height: 600px){
+    .content{
+        height: 500px;
+        padding: 0.7em;
+    }
+} 
