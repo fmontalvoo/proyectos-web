@@ -1,0 +1,132 @@
+@font-face {
+    font-family: PressStart;
+    src: url(../fonts/PressStart2P-Regular.ttf);
+}
+
+@font-face{
+    font-family: Simpsons;
+    src: url(../fonts/GloriaHallelujah-Regular.ttf);
+}
+
+html{
+    font-size: 12px;
+    font-family: PressStart;
+}
+
+a{
+    text-decoration: none;
+    color: #215D8F;
+}
+
+address{
+    font-size: 1em;
+    color: #3D444A;
+    font-weight: bold;
+
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sub-title{
+    /* border-width: 2px;
+    border-bottom-style: solid;
+    border-color: #DD0426; */
+    font-size: 2em;
+    padding-bottom: 1em;
+    border-bottom: solid 2px #DD0426;
+}
+
+.container{
+    /* Centrar items vertical y horizaontal. */
+    display: flex;
+    align-items: center; /* Centra en el eje vertical*/
+    justify-content: center; /* Centra en el eje horizaontal*/
+    background: #8e9eab;  /* fallback for old browsers */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    height: 100vh; /* Usa todo el alto de la pantalla. */
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    padding: 1.4em;
+    max-width: 960px;
+    max-height: 500px;
+    position: relative;
+    border-radius: 2em;
+    background-color: #E8EBED;
+    box-shadow: 7px 7px 21px #3D444A;
+}
+
+.actions{
+    top: 1em;
+    right: 1em;
+    position: absolute;
+}
+
+.close{
+    width:32px;
+    height:32px;
+    display: flex;
+    cursor: pointer;
+    font-weight: 300;
+    color: #E8EBED;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #FB2343;
+    box-shadow: 2px 2px 2px #3D444A;
+}
+
+a.close:focus{
+    background-color: #DD0426;
+}
+
+a.close:hover{
+    opacity:0.7;
+}
+
+.paragraph{
+    font-weight: 200;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table th, .table td{
+    padding: 1em;
+    text-align: left;
+}
+
+/* Colorea las filas pares de la tabla. */
+.table tr:nth-child(even){background-color: #B6C8D6;}
+
+.fa-star, .fa-star-half-alt{
+    color: #E2C044;
+}
+
+.position{
+    padding: 10px;
+    color: #E9EFF5;
+    margin-left: 0.5em;
+    border-radius: 1em;
+    background-color: #5A83A6;
+}
+
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 170px;
+}
