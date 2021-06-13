@@ -1,5 +1,5 @@
-async function loadLocale(locale = 'es') {
-    // const locale = navigator.language;
+async function loadLocale(locale = 'en') {
+    const locale = navigator.language.split('-');
     const file = await fetch(`./assets/locale/locale-${locale}.json`);
     return await file.json();
 
@@ -7,6 +7,9 @@ async function loadLocale(locale = 'es') {
 
 async function changeLanguage(locale) {
     const lang = await loadLocale(locale);
+
+    const html = document.querySelector("html");
+    html.lang = locale;
 
     const pageTitle = document.getElementById('page_title');
     pageTitle.innerText = lang.page_title;
@@ -31,5 +34,5 @@ async function changeLanguage(locale) {
 
 // Carga el lenguaje cuando la pagina termina de cargar.
 document.addEventListener("DOMContentLoaded", function (event) {
-    changeLanguage();
+    changeLanguage('es');
 });
