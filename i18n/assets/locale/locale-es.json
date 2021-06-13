@@ -1,4 +1,10 @@
 {
     "page_title": "Internacionalización",
-    "title": "¡Hola Mundo!"
+    "title": "¡Hola Mundo!",
+    "content": [
+        "JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar",
+        " ECMAScript. Se define como orientado a objetos,​ basado en prototipos, imperativo, débilmente tipado y dinámico."
+    ],
+    "btn_es": "Español",
+    "btn_en": "Ingles"
 }
